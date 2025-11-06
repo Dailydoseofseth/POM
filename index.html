@@ -9,15 +9,16 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 id="home">
-          Welcome to Your Personal Operating Manual (POM) Adventure!
-        </h1>
-        <img
-          class="img1"
-          src="https://assets.codepen.io/t-15440/itp-pexels-prateekkatyal-2740956.jpg"
-          alt="marguee sign on a desk that says you got this. each word on a different line of marquee board. a macbook sits to the right of desktop marquee with a brown leather planner directly in front of the marquee and to the left of the laptop. A serene & greenery background faintly seen through a white fogged, stain glass window. a professional setting."
-        />
-
+        <!--     <h1 id="home">Welcome to Your Personal Operating Manual (POM) Adventure!</h1> -->
+        <div>
+          <img
+            class="img1"
+            src="./img/desk.jpg"
+            alt="marguee sign on a desk that says you got this. each word on a different line of marquee board. a macbook sits to the right of desktop marquee with a brown leather planner directly in front of the marquee and to the left of the laptop. A serene & greenery background faintly seen through a white fogged, stain glass window. a professional setting."
+          />
+        </div>
+        <!--     <p>Creating your Personal Operating Manual (POM) is a fun way to share how you work best with your team. This worksheet will guide you through the process. Let's make it engaging and enjoyable!</p>
+ -->
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -27,17 +28,19 @@
             <li><a href="#personal">Personal Details</a></li>
             <li><a href="#feedback" class="button">Feedback</a></li>
           </ul>
-          <p>
-            Creating your Personal Operating Manual (POM) is a fun way to share
-            how you work best with your team. This worksheet will guide you
-            through the process. Let's make it engaging and enjoyable!
-          </p>
         </nav>
       </header>
 
       <main>
-        <div class="container">
-          <div class="card 1">
+        <h1>Welcome to Your Personal Operating Manual (POM) Adventure!</h1>
+        <p class="intro">
+          Creating your Personal Operating Manual (POM) is a fun way to share
+          how you work best with your team. This worksheet will guide you
+          through the process. Let's make it engaging and enjoyable!
+        </p>
+
+        <div class="grid">
+          <div class="card">
             <h2 id="basic">1. Basic Information</h2>
 
             <p>Start with the basics. Fill in the fields below:</p>
@@ -48,9 +51,9 @@
               <li>| Role | AnnieCannons Student |</li>
             </ul>
           </div>
-          <!-- <a href="#home" class="btn">Back To Top</a> -->
+          <!--       <a href="#home" class="btn">Back To Top</a> -->
 
-          <div class="card 2">
+          <div class="card">
             <h2 id="meeting">
               2. Many Working Hours...LATER & Best Time for Meeting
             </h2>
@@ -67,11 +70,11 @@
               <li>| Best Time for Meetings | 10am - 7pm (M-F) |</li>
             </ul>
           </div>
-          <!-- <a href="#home" class="btn">Back To Top</a> -->
+          <!--       <a href="#home" class="btn">Back To Top</a> -->
 
-          <div class="card 3">
+          <div class="card">
             <h2 id="collab">3. Preferred Collaboration Tools:</h2>
-            <ol>
+            <ul>
               <li>
                 <a
                   href="https://app.slack.com/client/T0C4U8M0C/C0C50JF26"
@@ -93,11 +96,11 @@
                   >Notion</a
                 >
               </li>
-            </ol>
+            </ul>
           </div>
-          <!-- <a href="#home" class="btn">Back To Top</a> -->
+          <!--       <a href="#home" class="btn">Back To Top</a> -->
 
-          <div class="card 4">
+          <div class="card">
             <h2 id="personal">4. Personal Details:</h2>
 
             <p>
@@ -130,9 +133,9 @@
               </tr>
             </table>
           </div>
-          <!-- <a href="#home" class="btn">Back To Top</a> -->
+          <!--       <a href="#home" class="btn">Back To Top</a> -->
 
-          <div class="card 5">
+          <div class="card">
             <h2 id="feedback">5. Feedback Preferences</h2>
 
             <p>Let your team know how you like to give and receive feedback</p>
@@ -171,7 +174,7 @@
             <blockquote>WHAT IS A STONE FRUIT, SpongeBob???</blockquote>
             <img
               class="img2"
-              src="data:image/jpeg;base64,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"
+              src="./img/pumpkin.webp"
               alt=" orange, smiling cartoon pumpkin/jack 'o' lantern with yellow heart eyes"
             />
             <ul>
@@ -205,9 +208,16 @@
               </li>
             </ul>
           </div>
-          <a href="#home" class="btn">Back To Top</a>
         </div>
+        <a href="#home" class="btn">Back To Top</a>
       </main>
+      <footer>
+        <p>
+          &copy; 2025 POM and
+          <a href="https://www.anniecannons.org" target="_blank">AnnieCannons</a
+          >.
+        </p>
+      </footer>
     </div>
   </body>
 </html>

@@ -1,22 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@900&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Danfo&family=Freckle+Face&family=Henny+Penny&family=Slackey&family=Story+Script&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Single+Ink:wght@100..900&family=Cantora+One&family=Freckle+Face&family=Henny+Penny&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Slackey&family=Story+Script&family=Titan+One&family=Wellfleet&family=Wendy+One&display=swap");
 
 /* :root {
   --primary-white: #ffffff;
-  --primary-cream: #fff0cb;
-  --primary-carrot: #f49619;
-  --primary-rust: #b55232;
-  --primary-ironstone: #b65939;
-  --primary-pine: #4c7031;
-  --primary-black: #000000;
-  --fonts-heading: "Freckle Face";
-  --fonts: "Sans Serif";
-  --fonts-body: "Story Script";
-  --radius: 9px;
+  --secondary-blue: #279dd2;
+  --secondary-green: #5ac15a;
+  --radius: 10px;
+  --radius-secondary: 50px;
 } */
 
-:root {
+/* :root {
   --primary-sponge: yellow;
-  --primary-pat: #ff7ccd;
+  --primary-pat: #ff7ccd;  
   --primary-squid: #77f4f4;
   --primary-orange: #f78923;
   --secondary-redical: #ff331f;
@@ -35,118 +29,138 @@
   --radius: 9px;
   --radius-circle: 240px;
   --radius-secondary: 50px;
+} */
+
+:root {
+  --primary-pink: #db1ded;
+  --primary-green: #8bc34a;
+  --primary-orange: #f78923;
+  --primary-blue: #2b69e5;
+  --secondary-green: #adf06e;
+  --secondary-blue: #ff331f;
+  --secondary-yellow: #ffc53d;
+  --third-green: darkgreen;
+  --radius: 9999px;
+  --radius-secondary: 50px;
 }
 
-* {
-  padding: 1rem;
-  margin: 1rem;
-}
+/* WHAT values repeat in the code??? */
+/* ROOT variables saves time!! */
+
+/* --------------------------------- */
 
 html {
   box-sizing: border-box;
 }
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  font-family: var(--fonts-body);
+  color: var(--third-green);
+  font-family: "Henny Penny", cursive;
   font-size: 1.3rem;
   margin: 0;
   padding: 0;
-  /*font-family: Arial, Helvetica, sans-serif;*/
-  background-color: #adf06e;
   background: repeating-linear-gradient(
     45deg,
-    #adf06e,
-    #adf06e 40px,
-    #8bc34a 40px,
-    #8bc34a 80px
+    var(--secondary-yellow),
+    var(--secondary-green) 40px,
+    var(--primary-blue) 40px,
+    var(--primary-green) 80px
   );
 }
-
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
-
 header {
-  background-color: var(--secondary-orange);
+  text-align: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
-  text-align: center;
-  align-items: center;
-  border-bottom: 11px double var(--primary-ironstone);
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-nav {
-  max-width: 250px;
-  display: flex;
-}
 nav ul {
-  list-style-type: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 1rem; /* spacing between links */
+  margin: 0;
+  padding: 0;
 }
+
 nav a {
-  display: inline-block;
-  color: var(--primary-rust);
-  font-size: 1.1rem;
+  display: block;
+  font-family: Bitcount Grid Double;
+  color: var(--primary-orange);
+  font-size: 1rem;
   text-decoration: none;
   padding: 1rem;
   font-weight: bold;
   text-transform: lowercase;
+  /*   align-items: center; */
+  text-shadow: 2px 2px 0 #000,
+    /* hard shadow for depth */ 4px 4px 6px rgba(0, 0, 0, 0.6),
+    /* soft blur for realism */ 0 0 6px rgba(255, 100, 0, 0.3); /* subtle glow accent */
 }
+
 nav a:hover {
-  color: var(--secondary-orange);
+  color: var(--secondary-yellow);
+  transform: translateY(-2px) scale(1.05);
+  text-shadow: 1px 1px 0 #000, 3px 3px 8px rgba(0, 0, 0, 0.7),
+    0 0 12px var(--secondary-yellow);
 }
-.button {
-  background-color: var(--secondary-wildpink);
+
+header > nav {
+  flex: 1; /* takes all remaining space after img div */
+  display: flex;
+  justify-content: flex-end; /* pushes links to right */
+}
+
+.button,
+.btn {
+  background-color: var(--secondary-blue);
   display: inline-block;
-  border: 6px solid var(--secondary-redical);
   border-radius: var(--radius);
   color: var(--primary-white);
   text-decoration: none;
-  padding: 0.75rem;
+  padding: 1rem 0.75rem;
+  /*   margin: 0 6rem 0 6rem; */
+  font-family: "Slackey";
   font-weight: bold;
   text-transform: lowercase;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  /*   align-items: center; */
 }
-.button:hover {
-  background-color: var(--secondary-green);
+.button:hover,
+.btn:hover {
+  background-color: var(--secondary-yellow);
   color: #000000;
 }
-
-h1 {
-  font-family: Freckle Face;
-  font-size: 3.7rem;
-  color: var(--primary-orange);
-}
-h2 {
-  font-family: Slackey;
-  font-size: 2rem;
-  color: #f54927;
-}
-
-header p {
-  max-width: 250px;
-}
-
-th {
-  font-family: Bitcount Prop Single Ink;
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-td {
-  color: green;
+.btn {
+  margin: 3rem 7rem 0 7rem;
 }
 
 img {
-  max-width: 444px;
+  max-width: 100%;
+  border-radius: var(--radius);
   filter: grayscale(0%);
   transition: filter 0.3s ease;
 }
+
 .img1:hover {
   filter: grayscale(100%);
   transform: skew(5deg, 5deg) scale(1.55); /*ALSO TRY rotate(15deg) */
@@ -161,11 +175,68 @@ img {
   transform: rotate(10deg) scale(5.3) translateY(-20px);
 }
 
-/* 1rem = 16px */
-p {
-  font-family: Henny Penny;
+h1 {
+  font-family: Freckle Face;
+  font-size: 3rem;
+  text-shadow: 2px 2px 0 #000,
+    /* hard shadow for depth */ 4px 4px 6px rgba(0, 0, 0, 0.6),
+    /* soft blur for realism */ 0 0 6px rgba(255, 100, 0, 0.3); /* subtle glow accent */
+}
+h2 {
+  font-family: "Slackey";
+  font-size: 2rem;
+  color: #f54927;
+}
+.intro {
+  font-family: "Wellfleet";
+  margin-bottom: 4rem;
+  text-align: center;
+}
+main {
+  margin-top: 3rem;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  gap: 4rem;
+}
+.card {
+  border: 6px double var(--third-green);
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.7s ease;
+}
+.card:hover {
+  transform: translateY(-20px);
+}
+.card ul,
+a {
+  list-style-type: none;
+  text-decoration: none;
+  /*   color: var(--primary-pink); */
 }
 
+.card th {
+  font-family: Titan One;
+  /*   font-size: 1.5rem; */
+  /*   font-weight: 900; */
+  /*   background-color: ; */
+}
+/* .card tr {
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 1rem;
+} */
+#collab ~ ul a {
+  color: var(--primary-blue);
+  font-family: "Slackey";
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+#collab ~ ul a:hover {
+  color: var(--secondary-yellow);
+  transform: scale(1.6);
+  font-size: 2rem;
+}
 blockquote {
   font-style: italic;
   font-size: 2rem;
@@ -173,138 +244,42 @@ blockquote {
   text-shadow: 1px 1px 0 #aaa, 2px 2px 0 #fff, 3px 3px 0 #999;
 }
 
-/* -------------Responsive Design EDIT----------- */
-
-/* .wrapper {
-  display: grid;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1rem;
+footer {
+  background-color: var(--third-green);
+  margin: 5rem 0;
+  padding: 1.5rem;
+  font-size: 1.1rem;
   text-align: center;
-} */
-
-/* header {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  padding: 1rem;
-} */
-
-/* nav {
-  
-} */
-
-nav ul {
-  list-style-type: none;
+  border-radius: var(--radius);
 }
-
-nav a {
+footer a {
+  color: #000000;
+  text-decoration: black wavy underline;
+}
+footer a:hover {
   text-decoration: none;
-  color: #f64927;
-  /*   font-weight: bolder; */
-  /*   font-size: 1.5rem;  */
 }
-
-nav a:hover {
-  color: #fff;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 2.7));
-  transform: translateY(-4px);
+footer p {
+  color: var(--secondary-blue);
+  text-shadow: 2px 2px 0 #000,
+    /* hard shadow for depth */ 4px 4px 6px rgba(0, 0, 0, 0.6),
+    /* soft blur for realism */ 0 0 6px rgba(255, 100, 0, 0.3); /* subtle glow accent */
 }
-
-.container {
-  /*   background-color: #33dddd; */
-  display: grid;
-  border: 23px dotted yellow;
-  padding: 2rem;
-  margin: 0 auto;
-  /*   display: grid; */
-  gap: 2rem;
-  /*   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto; */
-  /*     min-width: 200px; */
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-.card {
-  margin: 2rem;
-  padding: 2rem;
-  display: flex;
-  display: block;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  /*   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto; */
-  border: 4px solid darkgreen;
-  border-radius: 17px;
-}
-
-.card a {
-  text-decoration: none;
-  font-size: 2rem;
-  color: #ff25be;
-}
-
-.card a:hover {
-  color: #fff;
-  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 3.7));
-  transform: translateY(-8px);
-}
-
-.card tr {
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 1rem;
-}
-.btn {
-  color: #fff;
-  background-color: red;
-  padding: 9px;
-  margin-top: 3rem;
-  border: 2px solid darkblue;
-  border-radius: 13px;
-  text-decoration: none;
-  font-size: 9px;
-  /*   display: inline-block; */
-}
-
-@media (max-width: 780px) {
-  /*   .wrapper {
-    justify-content: center; 
-  }*/
-
-  header {
-    justify-content: center;
-  }
-  nav {
-    justify-content: center;
-  }
-  .container {
-    justify-content: center;
-  }
-  .card {
-    justify-content: center;
-  }
-}
-
-@media (min-width: 925px) {
-  /*   .wrapper {
-    justify-content: center; 
-  }*/
-
-  header {
-    justify-content: center;
-  }
-  nav {
-    justify-content: center;
-  }
-  .container {
-    display: grid;
+@media (min-width: 550px) {
+  .grid {
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
   }
-  .card {
+}
+
+@media (min-width: 850px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 800px) {
+  header {
     justify-content: center;
+    align-items: flex-end;
   }
 }
